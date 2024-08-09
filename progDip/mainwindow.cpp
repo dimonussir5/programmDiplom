@@ -23,10 +23,29 @@ MainWindow::MainWindow(QWidget *parent)
     findPathLabel = new QLabel("Путь к старому файлу на устройстве: Не найден", this);
     errorLabel = new QLabel("Ошибка: Нет", this);  // Изначально нет ошибок
 
-    // Устанавливаем круглую форму кнопок
-    uploadButton->setStyleSheet("border-radius: 50px; padding: 20px;");
-    findButton->setStyleSheet("border-radius: 50px; padding: 20px;");
-    updateButton->setStyleSheet("border-radius: 50px; padding: 20px;");
+    // Устанавливаем фоновое изображение для центрального виджета
+    centralWidget->setStyleSheet("background-image: url(:/images/background.jpg);"
+                                 "background-color: #2E2E2E;");  // Темный фон для лучшего контраста
+
+    // Устанавливаем стили для кнопок и текстов
+    QString buttonStyle = "border-radius: 50px; padding: 20px; "
+                          "color: white; font-size: 16px; "
+                          "background-color: #4A4A4A;";  // Темный фон кнопок для контраста
+
+    QString labelStyle = "color: white; font-size: 16px;";
+
+    uploadButton->setStyleSheet(buttonStyle);
+    findButton->setStyleSheet(buttonStyle);
+    updateButton->setStyleSheet(buttonStyle);
+
+    hsCanRadioButton->setStyleSheet(labelStyle);
+    lsCanRadioButton->setStyleSheet(labelStyle);
+    fdCanRadioButton->setStyleSheet(labelStyle);
+    autoDetectCheckBox->setStyleSheet(labelStyle);
+
+    uploadPathLabel->setStyleSheet(labelStyle);
+    findPathLabel->setStyleSheet(labelStyle);
+    errorLabel->setStyleSheet(labelStyle);
 
     layout->addWidget(autoDetectCheckBox);
     layout->addWidget(hsCanRadioButton);
@@ -37,7 +56,7 @@ MainWindow::MainWindow(QWidget *parent)
     layout->addWidget(updateButton);
     layout->addWidget(uploadPathLabel);
     layout->addWidget(findPathLabel);
-    layout->addWidget(errorLabel);  // Добавляем QLabel для ошибок
+    layout->addWidget(errorLabel);
 
     setCentralWidget(centralWidget);
 
@@ -55,6 +74,7 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
 }
+
 
 void MainWindow::onUploadAlgorithmClicked()
 {

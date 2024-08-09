@@ -243,6 +243,7 @@ Makefile: ../../progDip.pro C:/programm/msys/mingw64/share/qt6/mkspecs/win32-g++
 		C:/programm/msys/mingw64/share/qt6/mkspecs/features/qt_config.prf \
 		C:/programm/msys/mingw64/share/qt6/mkspecs/win32-g++/qmake.conf \
 		C:/programm/msys/mingw64/share/qt6/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		C:/programm/msys/mingw64/share/qt6/mkspecs/features/exclusive_builds.prf \
 		C:/programm/msys/mingw64/share/qt6/mkspecs/features/toolchain.prf \
 		C:/programm/msys/mingw64/share/qt6/mkspecs/features/default_pre.prf \
@@ -269,8 +270,8 @@ Makefile: ../../progDip.pro C:/programm/msys/mingw64/share/qt6/mkspecs/win32-g++
 		C:/programm/msys/mingw64/share/qt6/mkspecs/features/lex.prf \
 		../../progDip.pro \
 		C:/programm/msys/mingw64/lib/Qt6EntryPoint.prl \
-		.qmake.stash \
-		C:/programm/msys/mingw64/share/qt6/mkspecs/features/build_pass.prf
+		C:/programm/msys/mingw64/share/qt6/mkspecs/features/build_pass.prf \
+		../../resources.qrc
 	$(QMAKE) -o Makefile ..\..\progDip.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 C:/programm/msys/mingw64/share/qt6/mkspecs/features/spec_pre.prf:
 C:/programm/msys/mingw64/share/qt6/mkspecs/features/device_config.prf:
@@ -445,6 +446,7 @@ C:/programm/msys/mingw64/share/qt6/mkspecs/features/qt_functions.prf:
 C:/programm/msys/mingw64/share/qt6/mkspecs/features/qt_config.prf:
 C:/programm/msys/mingw64/share/qt6/mkspecs/win32-g++/qmake.conf:
 C:/programm/msys/mingw64/share/qt6/mkspecs/features/spec_post.prf:
+.qmake.stash:
 C:/programm/msys/mingw64/share/qt6/mkspecs/features/exclusive_builds.prf:
 C:/programm/msys/mingw64/share/qt6/mkspecs/features/toolchain.prf:
 C:/programm/msys/mingw64/share/qt6/mkspecs/features/default_pre.prf:
@@ -471,8 +473,8 @@ C:/programm/msys/mingw64/share/qt6/mkspecs/features/yacc.prf:
 C:/programm/msys/mingw64/share/qt6/mkspecs/features/lex.prf:
 ../../progDip.pro:
 C:/programm/msys/mingw64/lib/Qt6EntryPoint.prl:
-.qmake.stash:
 C:/programm/msys/mingw64/share/qt6/mkspecs/features/build_pass.prf:
+../../resources.qrc:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\..\progDip.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 
