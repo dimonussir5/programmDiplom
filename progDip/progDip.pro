@@ -16,3 +16,6 @@ FORMS += mainwindow.ui
 
 # Укажите путь к библиотеке и имя библиотеки
 LIBS += -L"C:/PCANBasic/libx64" -lPCANBasic
+
+RESOURCES += \
+    resources.qrc
